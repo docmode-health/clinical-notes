@@ -25,6 +25,6 @@ jobs:
         context: .
         push: true
         tags: |
-          yourdockerid/clinical-notes:latest
-          yourdockerid/clinical-notes:${{ github.ref_name }}
+          hemant816/clinical-notes:latest
+          hemant816/clinical-notes:${{ github.ref_name }}
 
