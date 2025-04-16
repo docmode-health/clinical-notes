@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  app_net:
+    driver: bridge
+
+services:
+  clinical-notes:
+    build: .
+    container_name: clinical-notes
+    ports:
+      - "3001:3000"  # Internal app runs on 3000, host maps it to 3001
+    env_file:
+      - .env.production
+    restart: unless-stopped
+    networks:
+      - app_net
+
